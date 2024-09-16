@@ -5,25 +5,27 @@ void setup() {
 }
 
 void draw() {
-int y;
-int x; //intialize variables
-for(y = -1250; y < 705; y += 65){ //set start, stop, and step increment
-for(x = -1550; x < 705; x += 75){ // adjust these values to control spacing
-scale (x,y);
+
+for(int y = 0; y < 575; y += 65){
+for(int x = 0; x < 575; x += 75){
+scale (x, y);
 }
 } 
 }
 
 void scale(int x, int y) {
-
-beginShape();
-curveVertex(x+300,y+100); //add variables to all coordinate points 
-curveVertex(x+300,y+100);
-curveVertex(x+225,y+200);
-curveVertex(x+100,y+300);
-curveVertex(x+225,y+400);
-curveVertex(x+300,y+500);
-curveVertex(x+300,y+500);
-endShape();
-
+  noFill();
+  
+  float c = 0; //variable for color adjustments
+  int i = 0; // variable to decrease the x points
+  int j = 0; // variable to decrease the y points
+ //add variables to all coordinate points 
+  
+  while((i < 33) && (j < 33)){
+  stroke(0);
+ // triangle(x, y of 1st point, x, y of 2nd point, x, y of 3rd point)
+ triangle(i+ x, j + y, (37 + x), (65-j) + y, (75-i) + x, j + y);
+    i+=10; 
+    j+=10;
+  }
 }

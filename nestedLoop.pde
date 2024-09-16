@@ -16,7 +16,6 @@ scale (x, y);
 void scale(int x, int y) {
   noFill();
   
-  float c = 0; //variable for color adjustments
   int i = 0; // variable to decrease the x points
   int j = 0; // variable to decrease the y points
  //add variables to all coordinate points 
